@@ -1,38 +1,187 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #acedff;
+}
+.heading {
+  background-color: #6f8ab7;
+  padding: 28px 0px;
+  margin: 0px;
   text-align: center;
+  font-size: 48px;
+  text-shadow: 2px 2px 8px #e2e1d7;
+  font-weight: 800;
+  border-radius: 5px;
+  border-bottom: 4px solid goldenrod;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input-box {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 8px;
+  padding: 42px 0px;
+  background-color: #acedff;
+  border-bottom: 2px solid goldenrod;
+}
+
+.input-area {
+  padding: 8px;
+  font-size: 18px;
+  resize: none;
+  border-radius: 16px;
+}
+
+.add-button {
+  appearance: button;
+  background-color: #1899d6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter 0.2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 430px;
+  text-decoration-line: underline;
+}
+
+.add-button:after {
+  background-clip: padding-box;
+  background-color: #1cb0f6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.add-button:main,
+.add-button:focus {
+  user-select: auto;
+}
+
+.add-button:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.add-button:disabled {
+  cursor: auto;
+}
+
+.add-button:active {
+  border-width: 4px 0 0;
+  background: none;
+}
+
+.drag-text {
+  background-color: #acedff;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  padding-top: 12px;
+}
+
+.todo-cards-container {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #acedff;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-card {
+  margin: 16px;
+  border: 1px solid #ccc;
+  padding: 8px;
+  height: 300px;
+  width: 400px;
+  display: flex;
+  background-color: #6f8ab7;
+  flex-direction: column;
+  display: flex;
+  gap: 10px;
+  border: 2px solid black;
+  border-radius: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.reorder-icon {
+  cursor: grab;
+  margin-top: 10px;
+}
+
+.todo-text {
+  overflow: hidden;
+  height: 100%;
+  padding: 8px;
+  background-color: white;
+  border-radius: 16px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  height: 19%;
+}
+
+.edit-button {
+  width: 49%;
+  appearance: button;
+  background-color: #0276ff;
+  border-radius: 8px;
+  border-style: none;
+  color: #fff;
+  cursor: pointer;
+  line-height: 1.15;
+  margin: 0;
+  font-size: 18px;
+  padding: 10px 21px;
+  text-align: center;
+}
+
+.edit-button:hover {
+  background-color: #1c84ff;
+}
+
+.delete-button {
+  width: 49%;
+  appearance: button;
+  background-color: rgb(210, 16, 16);
+  border-radius: 8px;
+  border-style: none;
+  color: #fff;
+  cursor: pointer;
+  line-height: 1.15;
+  margin: 0;
+  font-size: 18px;
+  padding: 10px 21px;
+  text-align: center;
+}
+
+.delete-button:hover {
+  background-color: rgb(244, 69, 69);
 }
